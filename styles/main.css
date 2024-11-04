@@ -1,0 +1,156 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    background: rgb(238, 13, 43);
+    color: #333;
+    min-height: 100px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, rgba(190,168,204,1) 0%, rgba(29,215,253,1) 50%, rgba(96,203,198,1) 100%);
+    color: white;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(91, 26, 188);
+    font-size: 25px;
+    margin-top: 1px;
+}
+
+header h2 {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 40%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-style: oblique;
+    letter-spacing: 1px;
+    color: olive;
+}
+
+nav {
+    display: flex;
+    gap: 0.5%;
+    justify-content: center; /* Center the nav items */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    border: 1px solid white;
+    padding: 0.5% 6%;
+    background-color: gray;
+    border-radius: 15px;
+}
+
+nav a:hover {
+    background: rgb(93, 226, 81);
+}
+
+/* Main */
+main {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
+    margin: 20px;
+}
+
+section {
+    flex: 1 1 calc(33.333% - 10px); /* Three-column layout */
+    margin: 5px; /* Space between columns */
+    padding-left: 1%;
+}
+
+section h3 {
+    color: rgb(146, 200, 112);
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    float: left;
+    padding-right: 5%;
+}
+
+section p {
+    display: inline;
+    justify-content: center;
+    color: #fff;
+}
+
+/* Sidebar */
+aside {
+    flex: 0.5;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+aside ul {
+    list-style-type: none;
+    font-size: 18px;
+    color: rgb(74, 63, 99);
+}
+
+aside ul a {
+    text-decoration: none;
+}
+
+aside ul a:hover {
+    color: rgb(239, 51, 51);
+}
+
+aside h4 {
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: palevioletred;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section {
+        flex: 1 1 calc(50% - 10px); /* Two-column layout on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        flex: 1 1 100%; /* Single column layout on mobile */
+    }
+    
+    nav {
+        flex-direction: column; /* Stack nav items vertically on mobile */
+        align-items: center; /* Center nav items */
+    }
+
+    nav a {
+        margin: 5px 0; /* Space between nav items */
+    }
+}
+
+/* Footer */
+footer {
+    padding:15px;
+    background: linear-gradient(90deg, rgba(190,168,204,1) 0%, rgba(29,215,253,1) 50%, rgba(96,203,198,1) 100%);
+    color: white;
+    position: relative;
+    margin-top: 2.3%;
+    width: 100%;
+}
